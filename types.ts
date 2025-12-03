@@ -28,3 +28,16 @@ export interface MovieResult {
 }
 
 export type GenerationResult = StorybookResult | MovieResult | null;
+
+// Export data structure for saved storybooks
+export interface StorybookExportData {
+  version: string;
+  exportDate: string;
+  storybook: StorybookResult;
+  images: {
+    index: number;
+    fileName: string;
+    mimeType: string;
+    base64Data: string;
+  }[];
+}
